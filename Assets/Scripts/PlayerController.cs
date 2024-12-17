@@ -6,6 +6,9 @@ public class CharacterControllerZQSD : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
+    
+    public float repulseForce = 10f;    
+    public float repulseDuration = 0.5f;
 
     void Start()
     {
@@ -18,6 +21,8 @@ public class CharacterControllerZQSD : MonoBehaviour
             mainCamera = Camera.main;
         }
         characterController = GetComponent<CharacterController>();
+        
+        GetComponent<Renderer>().material.color = Color.blue;
     }
 
 
@@ -54,6 +59,25 @@ public class CharacterControllerZQSD : MonoBehaviour
             // Rotate the player to face the mouse position
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = targetRotation;
+        }
+    }
+    
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            Rigidbody rbB = col.gameObject.GetComponent<Rigidbody>();
+            
+            if (rbB != null)
+            {
+                // Calculate repulsion direction
+                Vector3 repulsionDirection = (col.gameObject.transform.position - transform.position).normalized;
+                rbB.velocity = Vector3.zero; // Stop current movement
+                rbB.AddForce(repulsionDirection * repulseForce, ForceMode.Impulse);
+
+                // Notify Object B to resume moving toward A after repulsion
+                col.gameObject.GetComponent<Enemy>()?.StartMoveBackCoroutine(repulseDuration);
+            }
         }
     }
 }

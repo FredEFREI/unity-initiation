@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         
         GetComponent<Renderer>().material.color = Color.red;
-        target = GameObject.Find("Target").transform;
+        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         transform.parent = GameObject.Find("Entities").transform;
         
         float angle = Random.Range(0.0f, 1.0f) * Mathf.PI * 2;
