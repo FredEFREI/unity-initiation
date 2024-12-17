@@ -12,10 +12,15 @@ public class Enemy : MonoBehaviour
 {
     public Transform target;
     public float speed = 2.5f;
+    private Rigidbody rb;
+
+    private bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        
         GetComponent<Renderer>().material.color = Color.red;
         target = GameObject.Find("Target").transform;
         transform.parent = GameObject.Find("Entities").transform;
@@ -30,13 +35,45 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculate direction toward the target
-        Vector3 direction = (target.position - transform.position).normalized;
-
-        // Move the object forward in the direction of the target
-        transform.position += direction * speed * Time.deltaTime;
-
-        // Optionally, rotate the object to face the target
-        transform.forward = direction;
+        if (canMove)
+        {
+            // Move towards target (Object A)
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+            rb.velocity = directionToTarget * speed;
+        }
     }
+    
+    public void StartMoveBackCoroutine(float delay)
+    {
+        StartCoroutine(ResumeMovementAfterDelay(delay));
+    }
+
+    IEnumerator ResumeMovementAfterDelay(float delay)
+    {
+        canMove = false;
+        IgnoreCollisionsWithOtherEnemies(true);
+        yield return new WaitForSeconds(delay);
+        IgnoreCollisionsWithOtherEnemies(false);
+        canMove = true;
+    }
+    
+    void IgnoreCollisionsWithOtherEnemies(bool ignore)
+    {
+        // Find all Object B instances and ignore collisions
+        GameObject[] allBs = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject otherB in allBs)
+        {
+            if (otherB != gameObject) // Avoid self-collision check
+            {
+                Collider myCollider = GetComponent<Collider>();
+                Collider otherCollider = otherB.GetComponent<Collider>();
+
+                if (myCollider != null && otherCollider != null)
+                {
+                    Physics.IgnoreCollision(myCollider, otherCollider, ignore);
+                }
+            }
+        }
+    }
+    
 }
