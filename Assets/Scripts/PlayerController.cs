@@ -8,6 +8,7 @@ public class CharacterControllerZQSD : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
+    public GameObject bulletPrefab;
     
     public bool isRunning = false;
     

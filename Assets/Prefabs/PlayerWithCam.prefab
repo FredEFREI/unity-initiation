@@ -198,11 +198,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 6104357987525011720, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82b7886525e344933bff0e613fb17aba, type: 2}
+    - target: {fileID: 6213516703731604515, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+      propertyPath: mouseSensitivity
+      value: 1.94
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6213516703731604515, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4647228742136137731, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4531398976237695653, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642084095390001790}
+    - targetCorrespondingSourceObject: {fileID: 4531398976237695653, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1562506599424155772}
   m_SourcePrefab: {fileID: 100100000, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+--- !u!1 &2876380981225228957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4531398976237695653, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
+  m_PrefabInstance: {fileID: 1803751157712681016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8642084095390001790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876380981225228957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2554f92ee85964b46bbb6b7471753b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  sprintSpeed: 15
+  mainCamera: {fileID: 0}
+  isRunning: 0
+  repulseForce: 10
+  repulseDuration: 0.5
+--- !u!114 &1562506599424155772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876380981225228957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce685338b2714e89a2b93efa82d9db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 10
 --- !u!4 &6303065377399194171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5652240251190032899, guid: b84f132ecfaed4f4d89e9ad8067656fe, type: 3}
