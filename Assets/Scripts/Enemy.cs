@@ -39,12 +39,4 @@ public class Enemy : MonoBehaviour
         // Optionally, rotate the object to face the target
         transform.forward = direction;
     }
-    void OnCollisionEnter(Collision col)
-    {
-        print(col.gameObject.tag);
-        if (col.gameObject.CompareTag(target.tag))
-        {
-            Destroy(this);
-        }
-    }
 }

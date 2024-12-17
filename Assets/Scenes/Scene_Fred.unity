@@ -266,7 +266,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1096358081
 GameObject:
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3470993415601923819, guid: f9adeab8674dc0e4a9da8d52601761a3, type: 3}
-  targetTime: 5
+  targetTime: 0
 --- !u!1 &1411022654
 GameObject:
   m_ObjectHideFlags: 0

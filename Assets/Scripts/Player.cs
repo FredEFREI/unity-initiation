@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,8 +12,12 @@ public class Target : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision col)
     {
-        
+        print(col);
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(col.gameObject);
+        }
     }
 }
