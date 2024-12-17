@@ -46,6 +46,11 @@ public class CharacterControllerZQSD : MonoBehaviour
             moveSpeed = walkSpeed;
             isRunning = false;
         }
+        
+        if(Input.GetKeyDown(KeyCode.Space)){
+            Instantiate(bulletPrefab, this.transform.position + this.transform.forward, this.transform.rotation);
+        }
+        
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
