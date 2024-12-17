@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class CharacterControllerZQSD : MonoBehaviour
 {
-    public float moveSpeed = 5f;  // Speed of the player
+    public float walkSpeed = 5f;  // default Speed of the player
+    public float sprintSpeed = 15f; // default sprint speed of the player
+    private float moveSpeed;
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
+    public bool isRunning = false;
 
     void Start()
     {
@@ -26,8 +29,17 @@ public class CharacterControllerZQSD : MonoBehaviour
         // Process movement
         float moveX = Input.GetAxis("Horizontal"); // "Horizontal" axis corresponds to A/D or Q/D keys
         float moveZ = Input.GetAxis("Vertical");
+        
 
         Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+        if (Input.GetKey(KeyCode.LeftShift) && !isLookingBehind(move)) {
+            moveSpeed = sprintSpeed;
+            isRunning = true;
+        }
+        else {
+            moveSpeed = walkSpeed;
+            isRunning = false;
+        }
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
@@ -55,5 +67,16 @@ public class CharacterControllerZQSD : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = targetRotation;
         }
+    }
+
+    bool isLookingBehind(Vector3 move)
+    {
+        move = move.normalized;
+
+        // Compare the player's forward direction and move direction
+        float dotProduct = Vector3.Dot(transform.forward, move);
+
+        // If the dot product is less than a threshold, they are in opposite directions
+        return dotProduct < -0.80f; // Threshold close to -1 for "opposite"
     }
 }
