@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class CharacterControllerZQSD : MonoBehaviour
 {
-    public float moveSpeed = 5f;  // Speed of the player
+    public float walkSpeed = 5f;  // default Speed of the player
+    public float sprintSpeed = 15f; // default sprint speed of the player
+    private float moveSpeed;
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
-    public GameObject bulletPrefab;
+    
+    public bool isRunning = false;
+    
+    public float repulseForce = 10f;    
+    public float repulseDuration = 0.5f;
 
     void Start()
     {
@@ -19,21 +25,33 @@ public class CharacterControllerZQSD : MonoBehaviour
             mainCamera = Camera.main;
         }
         characterController = GetComponent<CharacterController>();
+        
+        GetComponent<Renderer>().material.color = Color.blue;
     }
 
 
     void Update()
     {
         // Process movement
-        float moveX = Input.GetAxis("Horizontal");
+        float moveX = Input.GetAxis("Horizontal"); // "Horizontal" axis corresponds to A/D or Q/D keys
         float moveZ = Input.GetAxis("Vertical");
+        
 
-        Vector3 move = Vector3.right * moveX + Vector3.forward * moveZ;
-        characterController.Move(move * moveSpeed * Time.deltaTime);
-
+        Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
+        if (Input.GetKey(KeyCode.LeftShift) && !isLookingBehind(move)) {
+            moveSpeed = sprintSpeed;
+            isRunning = true;
+        }
+        else {
+            moveSpeed = walkSpeed;
+            isRunning = false;
+        }
+        
         if(Input.GetKeyDown(KeyCode.Space)){
             Instantiate(bulletPrefab, this.transform.position + this.transform.forward, this.transform.rotation);
         }
+        
+        characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
         RotatePlayerToMouse();
@@ -59,6 +77,36 @@ public class CharacterControllerZQSD : MonoBehaviour
             // Rotate the player to face the mouse position
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = targetRotation;
+        }
+    }
+
+    bool isLookingBehind(Vector3 move)
+    {
+        move = move.normalized;
+
+        // Compare the player's forward direction and move direction
+        float dotProduct = Vector3.Dot(transform.forward, move);
+
+        // If the dot product is less than a threshold, they are in opposite directions
+        return dotProduct < -0.80f; // Threshold close to -1 for "opposite"
+    }
+    
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            Rigidbody rbB = col.gameObject.GetComponent<Rigidbody>();
+            
+            if (rbB != null)
+            {
+                // Calculate repulsion direction
+                Vector3 repulsionDirection = (col.gameObject.transform.position - transform.position).normalized;
+                rbB.velocity = Vector3.zero; // Stop current movement
+                rbB.AddForce(repulsionDirection * repulseForce, ForceMode.Impulse);
+
+                // Notify Object B to resume moving toward A after repulsion
+                col.gameObject.GetComponent<Enemy>()?.StartMoveBackCoroutine(repulseDuration);
+            }
         }
     }
 }
