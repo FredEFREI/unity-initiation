@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     public float speed = 2.5f;
     private Rigidbody rb;
 
+    public int damage;
+
     private bool canMove = true;
 
     // Start is called before the first frame update
@@ -29,6 +31,8 @@ public class Enemy : MonoBehaviour
         float z = Mathf.Sin(angle) * 5;
 
         transform.position = new Vector3(x, 0, z);
+
+        GetComponent<Damage>().damage = damage;
     }
 
     // Update is called once per frame

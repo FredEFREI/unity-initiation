@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CharacterControllerZQSD : MonoBehaviour
@@ -8,12 +9,14 @@ public class CharacterControllerZQSD : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
-    public GameObject bulletPrefab;
+    public GameObject weapon;
     
     public bool isRunning = false;
     
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
+
+    private float attackSpeed;
 
     void Start()
     {
@@ -27,6 +30,9 @@ public class CharacterControllerZQSD : MonoBehaviour
         }
 
         characterController = GetComponent<CharacterController>();
+        
+        GetWeaponStats();
+        StartCoroutine(FireRoutine());
 
     }
 
@@ -46,10 +52,6 @@ public class CharacterControllerZQSD : MonoBehaviour
         else {
             moveSpeed = walkSpeed;
             isRunning = false;
-        }
-        
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Instantiate(bulletPrefab, this.transform.position + this.transform.forward, this.transform.rotation);
         }
         
         characterController.Move(move * moveSpeed * Time.deltaTime);
@@ -109,5 +111,18 @@ public class CharacterControllerZQSD : MonoBehaviour
                 col.gameObject.GetComponent<Enemy>()?.StartMoveBackCoroutine(repulseDuration);
             }
         }
+    }
+
+    IEnumerator FireRoutine(){
+
+        while(true){
+
+            yield return new WaitForSeconds(attackSpeed);
+            Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
+        }
+    }
+
+    void GetWeaponStats(){
+        attackSpeed = weapon.GetComponent<Weapon>().attackSpeed;
     }
 }
