@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 82b7886525e344933bff0e613fb17aba, type: 2}
+    - target: {fileID: 5640263561999097705, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 8077989451118934717}
     - target: {fileID: 5723277693219565696, guid: 578c03f369544434e9c533436214b174, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -175,5 +179,10 @@ Camera:
 --- !u!4 &4962613394824494021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2736113517374616179, guid: 578c03f369544434e9c533436214b174, type: 3}
+  m_PrefabInstance: {fileID: 7000315835195181494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8077989451118934717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1242103661083112203, guid: 578c03f369544434e9c533436214b174, type: 3}
   m_PrefabInstance: {fileID: 7000315835195181494}
   m_PrefabAsset: {fileID: 0}
