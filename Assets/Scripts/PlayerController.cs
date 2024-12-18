@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CharacterControllerZQSD : MonoBehaviour
@@ -15,6 +16,8 @@ public class CharacterControllerZQSD : MonoBehaviour
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
 
+    private float fireRate = 1f;
+
     void Start()
     {
         // Get the Rigidbody component attached to the player
@@ -27,6 +30,8 @@ public class CharacterControllerZQSD : MonoBehaviour
         }
 
         characterController = GetComponent<CharacterController>();
+
+        StartCoroutine(FireRoutine());
 
     }
 
@@ -49,7 +54,6 @@ public class CharacterControllerZQSD : MonoBehaviour
         }
         
         if(Input.GetKeyDown(KeyCode.Space)){
-            Instantiate(bulletPrefab, this.transform.position + this.transform.forward, this.transform.rotation);
         }
         
         characterController.Move(move * moveSpeed * Time.deltaTime);
@@ -108,6 +112,15 @@ public class CharacterControllerZQSD : MonoBehaviour
                 // Notify Object B to resume moving toward A after repulsion
                 col.gameObject.GetComponent<Enemy>()?.StartMoveBackCoroutine(repulseDuration);
             }
+        }
+    }
+
+    IEnumerator FireRoutine(){
+
+        while(true){
+            
+            yield return new WaitForSeconds(fireRate);
+            Instantiate(bulletPrefab, this.transform.position + this.transform.forward, this.transform.rotation);
         }
     }
 }
