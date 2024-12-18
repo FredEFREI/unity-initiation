@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CharacterControllerZQSD : MonoBehaviour
+public class CharacterControllerScript : MonoBehaviour
 {
     public float walkSpeed = 5f;  // default Speed of the player
     public float sprintSpeed = 15f; // default sprint speed of the player
@@ -10,13 +10,14 @@ public class CharacterControllerZQSD : MonoBehaviour
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
     public GameObject weapon;
-    
+
     public bool isRunning = false;
     
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
 
     private float attackSpeed;
+
 
     void Start()
     {
@@ -33,7 +34,6 @@ public class CharacterControllerZQSD : MonoBehaviour
         
         GetWeaponStats();
         StartCoroutine(FireRoutine());
-
     }
 
 
