@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 964552551331729939}
   - component: {fileID: 8317693383812900631}
   - component: {fileID: 6884325282313685814}
-  - component: {fileID: 5857748452031506254}
   - component: {fileID: -6265209945803555030}
   - component: {fileID: 3313731752867663008}
+  - component: {fileID: -5616563105746353287}
   m_Layer: 0
-  m_Name: bulletPrefab
-  m_TagString: Bullet
+  m_Name: Shotgun
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,19 +111,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5857748452031506254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492757596523371877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c2636d03c0847b99ff7e342d9af692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!54 &-6265209945803555030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,6 +152,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   entityHealth: {fileID: 0}
+--- !u!114 &-5616563105746353287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492757596523371877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538a16721e92e4eceb5949e5a1ddaa56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  damage: 5
+  attackSpeed: 3
+  range: 2
 --- !u!1 &3678971677089050888
 GameObject:
   m_ObjectHideFlags: 0
