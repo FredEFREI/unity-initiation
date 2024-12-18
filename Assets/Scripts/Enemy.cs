@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         
-        GetComponent<Renderer>().material.color = Color.red;
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         transform.parent = GameObject.Find("Entities").transform;
         

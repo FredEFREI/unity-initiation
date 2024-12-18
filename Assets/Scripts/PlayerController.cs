@@ -25,9 +25,9 @@ public class CharacterControllerZQSD : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+
         characterController = GetComponent<CharacterController>();
-        
-        GetComponent<Renderer>().material.color = Color.blue;
+
     }
 
 
