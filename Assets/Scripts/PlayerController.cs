@@ -26,8 +26,9 @@ public class CharacterControllerScript : MonoBehaviour
     public float speedModifier = 1.0f;
     public int additionalProjection = 0;
     public float rangeModifer = 1.0f;
-    
 
+    public bool isInPauseMenu = false;
+    public GameObject canvas;
 
     void Start()
     {
@@ -78,7 +79,7 @@ public class CharacterControllerScript : MonoBehaviour
         {
             RotatePlayerToMouse();
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
         this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
@@ -169,6 +170,23 @@ public class CharacterControllerScript : MonoBehaviour
                 yield return new WaitForEndOfFrame();
         }
     }
-
-
+    public void TogglePauseMenu()
+    {
+        if (canvas != null)
+        {
+            if (!canvas.activeSelf)
+            {
+                canvas.SetActive(true);
+                Time.timeScale = 0;
+            } else
+            {
+                canvas.SetActive(false);
+                Time.timeScale = 1;
+            }  
+        }
+        else
+        {
+            Debug.LogError("Canvas is not assigned in the inspector.");
+        }
+    }
 }
