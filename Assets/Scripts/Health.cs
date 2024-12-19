@@ -31,16 +31,15 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cooldown > 0){
-        cooldown -= Time.deltaTime;
+        if(cooldown > 0){ 
+            cooldown -= Time.deltaTime;
         }
     }
 
     public void takeDamage(int amount){
 
         if(cooldown <= 0){
-
-        health -= amount;
+            health -= amount;
 
         if(health <= 0){
             Destroy(gameObject);

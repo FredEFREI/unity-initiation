@@ -43,7 +43,14 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
-        StartCoroutine(FireRoutine());
+        foreach (var weapon in weapons)
+        {
+            if (!weapon.GetComponent<Weapon>().owner)
+                weapon.GetComponent<Weapon>().owner = this;
+
+            // Start a separate coroutine for each weapon
+            StartCoroutine(FireWeaponRoutine(weapon));
+        }
     }
 
 
@@ -128,17 +135,12 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    IEnumerator FireRoutine(){
-
-        while(true){
-            foreach (var weapon in weapons)
-            {
-                if (!weapon.GetComponent<Weapon>().owner)
-                    weapon.GetComponent<Weapon>().owner = this;
-                yield return new WaitForSeconds(GetWeaponStats(weapon));
-                Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
-            }
-            
+    IEnumerator FireWeaponRoutine(GameObject weapon)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(GetWeaponStats(weapon)); // Wait for this weapon's cooldown
+            Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation); // Fire the weapon
         }
     }
 
