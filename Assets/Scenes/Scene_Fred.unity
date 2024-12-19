@@ -424,9 +424,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1492757596523371877, guid: 8abd522baae234e1491aa9b9e28586b0, type: 3}
     - target: {fileID: 1217985158779571133, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: levelUpXp
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217985158779571133, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1492757596523371877, guid: f4445d739fec34651be4bd5078c5787e, type: 3}
+    - target: {fileID: 1666113070726338124, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4466327047767154061, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -470,6 +478,18 @@ PrefabInstance:
     - target: {fileID: 4959311942660772020, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: m_Name
       value: Entities
+      objectReference: {fileID: 0}
+    - target: {fileID: 5126561887428267105, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5126561887428267105, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321255997280899149, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.999939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

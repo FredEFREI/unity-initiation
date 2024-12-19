@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public int damage;
 
     private bool canMove = true;
+    public float xp;
     
     // Start is called before the first frame update
     void Start()
@@ -84,5 +85,6 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         nbrEnemies--;
+        target.GetComponent<CharacterControllerScript>().AddXp(xp);
     }
 }
