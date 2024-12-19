@@ -428,12 +428,16 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1217985158779571133, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+      propertyPath: damageZone
+      value: 
+      objectReference: {fileID: 1468708298811175274, guid: 0cef5860c0e034615aa82ccb707154f7, type: 3}
+    - target: {fileID: 1217985158779571133, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1492757596523371877, guid: f4445d739fec34651be4bd5078c5787e, type: 3}
     - target: {fileID: 1666113070726338124, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.5
+      value: -20.499939
       objectReference: {fileID: 0}
     - target: {fileID: 4466327047767154061, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321255997280899149, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.999939
+      value: -16.999878
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

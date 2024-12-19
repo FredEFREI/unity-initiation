@@ -10,9 +10,8 @@ public class CharacterControllerScript : MonoBehaviour
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
     public GameObject weapon;
-
+    public GameObject damageZone;
     public bool isRunning = false;
-    
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
     private float attackSpeed;
@@ -35,6 +34,7 @@ public class CharacterControllerScript : MonoBehaviour
         
         GetWeaponStats();
         StartCoroutine(FireRoutine());
+        Instantiate(damageZone, this.transform.position, this.transform.rotation);
     }
 
 
