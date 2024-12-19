@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8317693383812900631}
   - component: {fileID: 6884325282313685814}
   - component: {fileID: -6265209945803555030}
-  - component: {fileID: 3313731752867663008}
   - component: {fileID: -5616563105746353287}
   m_Layer: 0
   m_Name: SMG
@@ -138,20 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3313731752867663008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492757596523371877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5df13adb3f848ff87d0e663c4f9569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
-  entityHealth: {fileID: 0}
 --- !u!114 &-5616563105746353287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +153,7 @@ MonoBehaviour:
   damage: 1
   attackSpeed: 0.2
   range: 4
+  entityHealth: {fileID: 0}
 --- !u!1 &3678971677089050888
 GameObject:
   m_ObjectHideFlags: 0
