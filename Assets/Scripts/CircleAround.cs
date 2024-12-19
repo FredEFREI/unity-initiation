@@ -1,11 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Circlearound : MonoBehaviour
 {
-        public float speed = 1;  //Drone travel speed;
-        public int damage = 5; //Flat damage
+        public float speed = 2;  //Drone travel speed;
+        public int damage = 3; //Flat damage
         public float radius = 3;
         private  Vector3 startPosition;
         private GameObject owner;
@@ -29,15 +30,15 @@ public class Circlearound : MonoBehaviour
             angle = angle + speed*Time.deltaTime;
             
         }
-        
-        private void onTriggerEnter(Collider collision){
+
+        private void OnTriggerEnter(Collider collision){
             
             Health entityHealth = collision.gameObject.GetComponent<Health>();
 
             if (entityHealth == null)
                 return;
             
-
+        
             if(collision.gameObject.tag == "Enemy"){
 
                 entityHealth.takeDamage(damage);
