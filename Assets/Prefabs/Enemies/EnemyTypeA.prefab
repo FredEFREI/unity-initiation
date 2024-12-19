@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2463398580773067586}
   - component: {fileID: 6953298222120410030}
   m_Layer: 0
-  m_Name: EnemyPrefab
+  m_Name: EnemyTypeA
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2.5
-  damage: 2
+  speed: 5
+  damage: 3
 --- !u!195 &6210987435623064960
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10
+  maxHealth: 4
 --- !u!114 &6953298222120410030
 MonoBehaviour:
   m_ObjectHideFlags: 0

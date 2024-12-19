@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
+    public static int nbrEnemies = 0;
     public Transform target;
     public float speed = 2.5f;
     private Rigidbody rb;
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
     public int damage;
 
     private bool canMove = true;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +28,13 @@ public class Enemy : MonoBehaviour
         transform.parent = GameObject.Find("Entities").transform;
         
         float angle = Random.Range(0.0f, 1.0f) * Mathf.PI * 2;
-        float x = Mathf.Cos(angle) * 5;
-        float z = Mathf.Sin(angle) * 5;
+        float x = Mathf.Cos(angle) * 15;
+        float z = Mathf.Sin(angle) * 15;
 
-        transform.position = new Vector3(x, 0, z);
+        transform.position = new Vector3(x + target.position.x, 0, z + target.position.z);
 
         GetComponent<Damage>().damage = damage;
+        nbrEnemies++;
     }
 
     // Update is called once per frame
@@ -78,5 +80,9 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        nbrEnemies--;
+    }
 }

@@ -9,6 +9,9 @@ public class Health : MonoBehaviour
     public  int maxHealth = 10;
     private float cooldown;
     private float cooldownTime = 3;
+
+    public Canvas UI;
+    private uiController uiScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,7 @@ public class Health : MonoBehaviour
         if(gameObject.tag != "Player"){
             cooldownTime = 0;
         }
+        uiScript = UI.GetComponent<uiController>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,13 @@ public class Health : MonoBehaviour
         
         cooldown = cooldownTime;
         }
-       
+        UpdatePlayerUI();
+    }
+
+    void UpdatePlayerUI()
+    {
+        uiScript.playerHealth=health;
+        uiScript.playerMaxHealth = maxHealth;
+        uiScript.UpdateHealthUI();
     }
 }
