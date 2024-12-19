@@ -16,6 +16,10 @@ public class CharacterControllerScript : MonoBehaviour
     
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
+    private float attackSpeed;
+    public float xp;
+    public float levelUpXp;
+
 
     void Start()
     {
@@ -54,7 +58,11 @@ public class CharacterControllerScript : MonoBehaviour
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
-        RotatePlayerToMouse();
+        if (Time.timeScale != 0)
+        {
+            RotatePlayerToMouse();
+        }
+
         this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
@@ -126,4 +134,28 @@ public class CharacterControllerScript : MonoBehaviour
     float GetWeaponStats(GameObject weapon){
         return weapon.GetComponent<Weapon>().attackSpeed;
     }
+
+    public void AddXp(float x){
+
+        xp += x;
+
+        if(xp >= levelUpXp){
+            xp -= levelUpXp;
+            levelUpXp *= 1.10f;
+            StartCoroutine(UpgradePause());
+        }
+    }
+
+    IEnumerator UpgradePause(){
+
+        Time.timeScale = 0;
+        while(Time.timeScale == 0){
+                if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+                    Time.timeScale = 1;
+                }
+                yield return new WaitForEndOfFrame();
+            }
+    }
+
+
 }
