@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
@@ -9,15 +10,12 @@ public class CharacterControllerScript : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
-    public GameObject weapon;
+    public List<GameObject> weapons = new List<GameObject>();
 
     public bool isRunning = false;
     
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
-
-    private float attackSpeed;
-
 
     void Start()
     {
@@ -32,7 +30,6 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
-        GetWeaponStats();
         StartCoroutine(FireRoutine());
     }
 
@@ -117,13 +114,16 @@ public class CharacterControllerScript : MonoBehaviour
     IEnumerator FireRoutine(){
 
         while(true){
-
-            yield return new WaitForSeconds(attackSpeed);
-            Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
+            foreach (var weapon in weapons)
+            {
+                yield return new WaitForSeconds(GetWeaponStats(weapon));
+                Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
+            }
+            
         }
     }
 
-    void GetWeaponStats(){
-        attackSpeed = weapon.GetComponent<Weapon>().attackSpeed;
+    float GetWeaponStats(GameObject weapon){
+        return weapon.GetComponent<Weapon>().attackSpeed;
     }
 }
