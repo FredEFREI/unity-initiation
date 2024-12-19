@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        entityHealth = gameObject.GetComponent<Health>();
         
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         transform.parent = GameObject.Find("Entities").transform;

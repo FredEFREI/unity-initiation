@@ -31,6 +31,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     void Start()
     {
+        gameObject.GetComponent<Health>().setIsPlayer();
         // Get the Rigidbody component attached to the player
         rb = GetComponent<Rigidbody>();
 
@@ -132,6 +133,8 @@ public class CharacterControllerScript : MonoBehaviour
         while(true){
             foreach (var weapon in weapons)
             {
+                if (!weapon.GetComponent<Weapon>().owner)
+                    weapon.GetComponent<Weapon>().owner = this;
                 yield return new WaitForSeconds(GetWeaponStats(weapon));
                 Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
             }
@@ -162,7 +165,7 @@ public class CharacterControllerScript : MonoBehaviour
                     Time.timeScale = 1;
                 }
                 yield return new WaitForEndOfFrame();
-            }
+        }
     }
 
 
