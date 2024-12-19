@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     public float range = 5f;  //Range before destruction;
     private  Vector3 startPosition;
     public Health entityHealth;
+    public CharacterControllerScript owner;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,9 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += transform.forward  * speed * Time.deltaTime;
+        this.transform.position += transform.forward  * (speed * owner.speedModifier) * Time.deltaTime;
 
-        if(Mathf.Abs(Vector3.Distance(startPosition, this.transform.position)) > range){
+        if(Mathf.Abs(Vector3.Distance(startPosition, this.transform.position)) > range * owner.rangeModifer){
             Destroy(this.gameObject);
         }
     }
@@ -37,10 +38,10 @@ public class Weapon : MonoBehaviour
                 return;
         }
 
-        if(collision.gameObject.tag == "Enemy"){
+        if(collision.gameObject.CompareTag("Enemy")){
 
             Destroy(gameObject);
-            entityHealth.takeDamage(damage);
+            entityHealth.takeDamage(Mathf.FloorToInt(damage * owner.attackDamageModifier));
         }
     }
 
