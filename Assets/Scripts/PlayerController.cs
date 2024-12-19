@@ -23,7 +23,7 @@ public class CharacterControllerScript : MonoBehaviour
     public float attackSpeedModifier = 1.0f;
     public float attackDamageModifier = 1.0f;
     public float damageReduction = 0.0f;
-    public float speedModifier = 1.0f
+    public float speedModifier = 1.0f;
     public int additionalProjection = 0;
     
 
