@@ -58,6 +58,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         // Process rotation
         RotatePlayerToMouse();
+        this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
     void RotatePlayerToMouse()
