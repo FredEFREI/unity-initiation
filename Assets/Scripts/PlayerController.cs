@@ -58,7 +58,11 @@ public class CharacterControllerScript : MonoBehaviour
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
-        RotatePlayerToMouse();
+        if (Time.timeScale != 0)
+        {
+            RotatePlayerToMouse();
+        }
+
         this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
@@ -133,7 +137,7 @@ public class CharacterControllerScript : MonoBehaviour
         xp += x;
 
         if(xp >= levelUpXp){
-            xp = 0;
+            xp -= levelUpXp;
             levelUpXp *= 1.10f;
             StartCoroutine(UpgradePause());
         }
@@ -143,7 +147,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         Time.timeScale = 0;
         while(Time.timeScale == 0){
-                if(Input.GetKeyUp(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+                if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
                     Time.timeScale = 1;
                 }
                 yield return new WaitForEndOfFrame();
