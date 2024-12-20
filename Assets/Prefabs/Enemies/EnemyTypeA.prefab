@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7169178, y: 1.7169178, z: 1.7169178}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6137849543849224378}
@@ -202,6 +202,18 @@ PrefabInstance:
     - target: {fileID: 8709320745931465833, guid: 814aee18c5443be46ba1e7667f6696b9, type: 3}
       propertyPath: m_Name
       value: Crawler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867337709904891300, guid: 814aee18c5443be46ba1e7667f6696b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.716918
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867337709904891300, guid: 814aee18c5443be46ba1e7667f6696b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.716918
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867337709904891300, guid: 814aee18c5443be46ba1e7667f6696b9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.716918
       objectReference: {fileID: 0}
     - target: {fileID: 8867337709904891300, guid: 814aee18c5443be46ba1e7667f6696b9, type: 3}
       propertyPath: m_LocalPosition.x
