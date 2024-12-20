@@ -104,7 +104,8 @@ public class LevelUP : MonoBehaviour
                     player.GetComponent<CharacterControllerScript>().attackDamageModifier += 0.5f;
                     break;
                 case 1 :
-                    player.GetComponent<Health>().maxHealth = Mathf.FloorToInt(player.GetComponent<Health>().maxHealth * 0.5f);
+                    player.GetComponent<Health>().maxHealth = Mathf.FloorToInt(player.GetComponent<Health>().maxHealth * 1.5f);
+                    player.GetComponent<Health>().health = player.GetComponent<Health>().maxHealth;
                     break;
                 case 2 :
                     player.GetComponent<CharacterControllerScript>().speedModifier += 0.2f;
