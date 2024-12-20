@@ -8,9 +8,9 @@ using Random = UnityEngine.Random;
 public class RandomShotBouncing : RandomShot
 {
     
-    public float speed = 3;  //Bullet travel speed;
+    public float speed = 4;  //Bullet travel speed;
     public int damage = 4; //Flat damage
-    public float attackSpeed = 5f; //Seconds between each shot
+    public float attackSpeed = 6f; //Seconds between each shot
     public float range = 25f;  //Range before destruction;
     private  Vector3 startPosition;
     public Health entityHealth;
