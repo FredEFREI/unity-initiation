@@ -98,7 +98,6 @@ public class Enemy : MonoBehaviour
         }
 
         if(collision.gameObject.CompareTag("Player")){
-            print(entityHealth.health);
             entityHealth.takeDamage(damage);
         }
     }
