@@ -29,7 +29,8 @@ public class CharacterControllerScript : MonoBehaviour
     public float rangeModifer = 1.0f;
 
     public bool isInPauseMenu = false;
-    public GameObject canvas;
+    public GameObject pauseCanvas;
+    public GameObject looseCanvas;
 
     void Start()
     {
@@ -83,7 +84,7 @@ public class CharacterControllerScript : MonoBehaviour
             RotatePlayerToMouse();
         }
         if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
-        this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
+            this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
     void RotatePlayerToMouse()
@@ -138,6 +139,10 @@ public class CharacterControllerScript : MonoBehaviour
             }
         }
     }
+    void OnDestroy()
+    {
+
+    }
 
     IEnumerator FireWeaponRoutine(GameObject weapon)
     {
@@ -175,21 +180,41 @@ public class CharacterControllerScript : MonoBehaviour
     }
     public void TogglePauseMenu()
     {
-        if (canvas != null)
+        if (pauseCanvas != null)
         {
-            if (!canvas.activeSelf)
+            if (!pauseCanvas.activeSelf)
             {
-                canvas.SetActive(true);
+                pauseCanvas.SetActive(true);
                 Time.timeScale = 0;
             } else
             {
-                canvas.SetActive(false);
+                pauseCanvas.SetActive(false);
                 Time.timeScale = 1;
             }  
         }
         else
         {
             Debug.LogError("Canvas is not assigned in the inspector.");
+        }
+    }
+    public void ToggleLooseMenu()
+    {
+        if (looseCanvas != null)
+        {
+            if (!looseCanvas.activeSelf)
+            {
+                looseCanvas.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                looseCanvas.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+        else
+        {
+            Debug.LogError("looseCanvas is not assigned in the inspector.");
         }
     }
 }
