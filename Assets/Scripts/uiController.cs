@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,21 +20,24 @@ public class uiController : MonoBehaviour
     public int playerMaxHealth = 10;
     public int playerHealth = 10;
 
+    private GameObject player;
+
     void Start()
     {   
         // initialise the level display when the game starts
+        player = GameObject.FindGameObjectWithTag("Player");
         UpdateLevelUI();
     }
-    
+
 
     // Methods to update the TextMeshPro for the level, life and ammo display
     void UpdateAmmoUI()
     {
         ammoUI.text = playerAmmo + "/" + playerMagSize;
     }
-    void UpdateLevelUI()
+    public void UpdateLevelUI()
     {
-        levelUI.text = "LV: " + playerLevel.ToString();
+        levelUI.text = "LV: " + player.GetComponent<CharacterControllerScript>().lvl;
     }
     public void UpdateHealthUI()
     {

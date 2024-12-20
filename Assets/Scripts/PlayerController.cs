@@ -11,12 +11,24 @@ public class CharacterControllerScript : MonoBehaviour
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
     public List<GameObject> weapons = new List<GameObject>();
+
     public bool isRunning = false;
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
-    public float xp;
-    public float levelUpXp;
-    public int level;
+
+
+    private List<Coroutine> weaponsRoutine = new List<Coroutine>();
+    private LevelUP lvlManager;
+
+    public bool isRunning = false;
+    public float repulseForce = 10f;    
+    public float repulseDuration = 0.5f;
+   
+    public float xp = 0;
+    public float levelUpXp = 5;
+    public int lvl = 1;
+    
+
     public float attackSpeedModifier = 1.0f;
     public int attackDamageModifier = 1;
     public float damageReduction = 0.0f;
@@ -25,7 +37,8 @@ public class CharacterControllerScript : MonoBehaviour
     public float rangeModifer = 1.0f;
     public float bulletSpeedModifier = 1.0f;
     public bool isInPauseMenu = false;
-    public GameObject canvas;
+    public GameObject pauseCanvas;
+    public GameObject looseCanvas;
 
     void Start()
     {
@@ -41,15 +54,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
+        lvlManager = GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>();
 
-        foreach (var weapon in weapons)
-        {
-            if (!weapon.GetComponent<Weapon>().owner)
-                weapon.GetComponent<Weapon>().owner = this;
-
-            // Start a separate coroutine for each weapon
-            StartCoroutine(FireWeaponRoutine(weapon));
-        }
+        startAllCoroutine();
 
         levelUpXp = 10;
         level =1;
@@ -82,7 +89,8 @@ public class CharacterControllerScript : MonoBehaviour
         {
             RotatePlayerToMouse();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+            TogglePauseMenu();
         this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
@@ -138,6 +146,34 @@ public class CharacterControllerScript : MonoBehaviour
             }
         }
     }
+    void OnDestroy()
+    {
+        ToggleLooseMenu();
+    }
+
+    void startAllCoroutine()
+    {
+        foreach (var weapon in weapons)
+        {
+            if (!weapon.GetComponent<Weapon>().owner)
+                weapon.GetComponent<Weapon>().owner = this;
+
+            // Start a separate coroutine for each weapon
+             weaponsRoutine.Add(StartCoroutine(FireWeaponRoutine(weapon)));
+        }
+    }
+
+    void resetAllRoutine()
+    {
+        foreach (var coroutine in weaponsRoutine)
+        {
+            StopCoroutine(coroutine);
+        }
+
+        weaponsRoutine.Clear();
+        
+        startAllCoroutine();
+    }
 
     IEnumerator FireWeaponRoutine(GameObject weapon)
     {
@@ -159,12 +195,15 @@ public class CharacterControllerScript : MonoBehaviour
         if(xp >= levelUpXp){
             xp -= levelUpXp;
             levelUpXp *= 1.10f;
+            lvl++;
             StartCoroutine(UpgradePause());
+            resetAllRoutine();
         }
     }
 
-    IEnumerator UpgradePause(){
-
+    IEnumerator UpgradePause()
+    {
+        lvlManager.initializeLvlUp(lvl);
         Time.timeScale = 0;
         while(Time.timeScale == 0){
                 if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
@@ -175,21 +214,41 @@ public class CharacterControllerScript : MonoBehaviour
     }
     public void TogglePauseMenu()
     {
-        if (canvas != null)
+        if (pauseCanvas)
         {
-            if (!canvas.activeSelf)
+            if (!pauseCanvas.activeSelf)
             {
-                canvas.SetActive(true);
+                pauseCanvas.SetActive(true);
                 Time.timeScale = 0;
             } else
             {
-                canvas.SetActive(false);
+                pauseCanvas.SetActive(false);
                 Time.timeScale = 1;
             }  
         }
         else
         {
             Debug.LogError("Canvas is not assigned in the inspector.");
+        }
+    }
+    public void ToggleLooseMenu()
+    {
+        if (looseCanvas != null)
+        {
+            if (!looseCanvas.activeSelf)
+            {
+                looseCanvas.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                looseCanvas.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+        else
+        {
+            Debug.LogError("looseCanvas is not assigned in the inspector.");
         }
     }
 }
