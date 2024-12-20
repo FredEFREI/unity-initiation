@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public int health = 10;
     public  int maxHealth = 10;
     private float cooldown;
-    private float cooldownTime = 3;
+    private float cooldownTime = 1.5f;
     private bool isPlayer = false;
 
     public Canvas UI;
