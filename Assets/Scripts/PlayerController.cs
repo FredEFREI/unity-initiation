@@ -13,13 +13,15 @@ public class CharacterControllerScript : MonoBehaviour
 
     public List<GameObject> weapons = new List<GameObject>();
 
+    private List<Coroutine> weaponsRoutine = new List<Coroutine>();
 
     public bool isRunning = false;
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
    
-    public float xp;
-    public float levelUpXp;
+    public float xp = 0;
+    public float levelUpXp = 5;
+    private int lvl = 1;
     
     public float attackSpeedModifier = 1.0f;
     public float attackDamageModifier = 1.0f;
@@ -46,14 +48,7 @@ public class CharacterControllerScript : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         
 
-        foreach (var weapon in weapons)
-        {
-            if (!weapon.GetComponent<Weapon>().owner)
-                weapon.GetComponent<Weapon>().owner = this;
-
-            // Start a separate coroutine for each weapon
-            StartCoroutine(FireWeaponRoutine(weapon));
-        }
+        startAllCoroutine();
 
     }
 
@@ -139,6 +134,30 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
+    void startAllCoroutine()
+    {
+        foreach (var weapon in weapons)
+        {
+            if (!weapon.GetComponent<Weapon>().owner)
+                weapon.GetComponent<Weapon>().owner = this;
+
+            // Start a separate coroutine for each weapon
+             weaponsRoutine.Add(StartCoroutine(FireWeaponRoutine(weapon)));
+        }
+    }
+
+    void resetAllRoutine()
+    {
+        foreach (var coroutine in weaponsRoutine)
+        {
+            StopCoroutine(coroutine);
+        }
+
+        weaponsRoutine.Clear();
+        
+        startAllCoroutine();
+    }
+
     IEnumerator FireWeaponRoutine(GameObject weapon)
     {
         while (true)
@@ -159,12 +178,15 @@ public class CharacterControllerScript : MonoBehaviour
         if(xp >= levelUpXp){
             xp -= levelUpXp;
             levelUpXp *= 1.10f;
+            lvl++;
             StartCoroutine(UpgradePause());
+            resetAllRoutine();
         }
     }
 
-    IEnumerator UpgradePause(){
-
+    IEnumerator UpgradePause()
+    {
+        GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>().initializeLvlUp(lvl);
         Time.timeScale = 0;
         while(Time.timeScale == 0){
                 if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
