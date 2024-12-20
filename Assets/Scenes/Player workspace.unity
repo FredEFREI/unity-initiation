@@ -589,6 +589,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 210474366609301096, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.500122
+      objectReference: {fileID: 0}
     - target: {fileID: 290518341167724409, guid: 578c03f369544434e9c533436214b174, type: 3}
       propertyPath: m_Name
       value: PlayerWithCam
@@ -599,6 +603,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 765987413469301340, guid: 578c03f369544434e9c533436214b174, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473447760606994457, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1539588876264759036, guid: 578c03f369544434e9c533436214b174, type: 3}
@@ -661,6 +669,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3936008632086665723, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 63.499992
+      objectReference: {fileID: 0}
     - target: {fileID: 4176689969274382724, guid: 578c03f369544434e9c533436214b174, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -677,12 +689,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5568633215490314193, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515420843344608369, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196895631266595339, guid: 578c03f369544434e9c533436214b174, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8518883236189741050, guid: 578c03f369544434e9c533436214b174, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.500061
+      value: -20.499939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 907409461800183038, guid: 578c03f369544434e9c533436214b174, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 578c03f369544434e9c533436214b174, type: 3}
@@ -798,7 +823,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.89e-43, w: 3.224974e+30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

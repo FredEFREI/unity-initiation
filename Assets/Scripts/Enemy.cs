@@ -89,16 +89,16 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision){
-
         if(entityHealth == null){
 
             entityHealth = collision.gameObject.GetComponent<Health>();
+            
             if(entityHealth == null)
                 return;
         }
 
-        if(collision.gameObject.tag ==  "Player"){
-
+        if(collision.gameObject.CompareTag("Player")){
+            print(entityHealth.health);
             entityHealth.takeDamage(damage);
         }
     }
