@@ -9,20 +9,39 @@ public class Weapon : MonoBehaviour
     public float attackSpeed = 1f; //Seconds between each shot
     public float range = 5f;  //Range before destruction;
     private  Vector3 startPosition;
+    public Health entityHealth;
+    public CharacterControllerScript owner;
+
     // Start is called before the first frame update
     void Start()
     {
         startPosition = this.transform.position;
-        GetComponent<Damage>().damage = damage;
+        //GetComponent<Damage>().damage = damage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += transform.forward  * speed * Time.deltaTime;
+        this.transform.position += transform.forward  * (speed * owner.speedModifier) * Time.deltaTime;
 
-        if(Mathf.Abs(Vector3.Distance(startPosition, this.transform.position)) > range){
+        if(Mathf.Abs(Vector3.Distance(startPosition, this.transform.position)) > range * owner.rangeModifer){
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision){
+
+        if(entityHealth == null){
+
+            entityHealth = collision.gameObject.GetComponent<Health>();
+            if(entityHealth == null)
+                return;
+        }
+
+        if(collision.gameObject.CompareTag("Enemy")){
+
+            Destroy(gameObject);
+            entityHealth.takeDamage(Mathf.FloorToInt(damage * owner.attackDamageModifier));
         }
     }
 

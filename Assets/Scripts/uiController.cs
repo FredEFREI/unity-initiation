@@ -29,7 +29,7 @@ public class uiController : MonoBehaviour
     // Methods to update the TextMeshPro for the level, life and ammo display
     void UpdateAmmoUI()
     {
-        ammoUI.text = playerAmmo+"/"+playerMagSize;
+        ammoUI.text = playerAmmo + "/" + playerMagSize;
     }
     void UpdateLevelUI()
     {

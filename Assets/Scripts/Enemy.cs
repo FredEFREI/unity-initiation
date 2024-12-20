@@ -14,15 +14,17 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public float speed = 2.5f;
     private Rigidbody rb;
-
     public int damage;
-
     private bool canMove = true;
+    public float xp;
+    public Health entityHealth;
+
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        entityHealth = gameObject.GetComponent<Health>();
         
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         transform.parent = GameObject.Find("Entities").transform;
@@ -33,7 +35,7 @@ public class Enemy : MonoBehaviour
 
         transform.position = new Vector3(x + target.position.x, 0, z + target.position.z);
 
-        GetComponent<Damage>().damage = damage;
+        //GetComponent<Damage>().damage = damage;
         nbrEnemies++;
     }
 
@@ -84,5 +86,21 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         nbrEnemies--;
+        target.GetComponent<CharacterControllerScript>().AddXp(xp);
+    }
+
+    private void OnCollisionEnter(Collision collision){
+
+        if(entityHealth == null){
+
+            entityHealth = collision.gameObject.GetComponent<Health>();
+            if(entityHealth == null)
+                return;
+        }
+
+        if(collision.gameObject.tag ==  "Player"){
+
+            entityHealth.takeDamage(damage);
+        }
     }
 }

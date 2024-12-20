@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
@@ -9,18 +10,29 @@ public class CharacterControllerScript : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
-    public GameObject weapon;
+    public List<GameObject> weapons = new List<GameObject>();
 
     public bool isRunning = false;
     
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
+   
+    public float xp;
+    public float levelUpXp;
+    
+    public float attackSpeedModifier = 1.0f;
+    public float attackDamageModifier = 1.0f;
+    public float damageReduction = 0.0f;
+    public float speedModifier = 1.0f;
+    public int additionalProjection = 0;
+    public float rangeModifer = 1.0f;
 
-    private float attackSpeed;
-
+    public bool isInPauseMenu = false;
+    public GameObject canvas;
 
     void Start()
     {
+        gameObject.GetComponent<Health>().setIsPlayer();
         // Get the Rigidbody component attached to the player
         rb = GetComponent<Rigidbody>();
 
@@ -32,8 +44,14 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
-        GetWeaponStats();
-        StartCoroutine(FireRoutine());
+        foreach (var weapon in weapons)
+        {
+            if (!weapon.GetComponent<Weapon>().owner)
+                weapon.GetComponent<Weapon>().owner = this;
+
+            // Start a separate coroutine for each weapon
+            StartCoroutine(FireWeaponRoutine(weapon));
+        }
     }
 
 
@@ -57,7 +75,12 @@ public class CharacterControllerScript : MonoBehaviour
         characterController.Move(move * moveSpeed * Time.deltaTime);
 
         // Process rotation
-        RotatePlayerToMouse();
+        if (Time.timeScale != 0)
+        {
+            RotatePlayerToMouse();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
+        this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
     void RotatePlayerToMouse()
@@ -113,16 +136,57 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    IEnumerator FireRoutine(){
-
-        while(true){
-
-            yield return new WaitForSeconds(attackSpeed);
-            Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation);
+    IEnumerator FireWeaponRoutine(GameObject weapon)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(GetWeaponStats(weapon)); // Wait for this weapon's cooldown
+            Instantiate(weapon, this.transform.position + this.transform.forward, this.transform.rotation); // Fire the weapon
         }
     }
 
-    void GetWeaponStats(){
-        attackSpeed = weapon.GetComponent<Weapon>().attackSpeed;
+    float GetWeaponStats(GameObject weapon){
+        return weapon.GetComponent<Weapon>().attackSpeed;
+    }
+
+    public void AddXp(float x){
+
+        xp += x;
+
+        if(xp >= levelUpXp){
+            xp -= levelUpXp;
+            levelUpXp *= 1.10f;
+            StartCoroutine(UpgradePause());
+        }
+    }
+
+    IEnumerator UpgradePause(){
+
+        Time.timeScale = 0;
+        while(Time.timeScale == 0){
+                if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
+                    Time.timeScale = 1;
+                }
+                yield return new WaitForEndOfFrame();
+        }
+    }
+    public void TogglePauseMenu()
+    {
+        if (canvas != null)
+        {
+            if (!canvas.activeSelf)
+            {
+                canvas.SetActive(true);
+                Time.timeScale = 0;
+            } else
+            {
+                canvas.SetActive(false);
+                Time.timeScale = 1;
+            }  
+        }
+        else
+        {
+            Debug.LogError("Canvas is not assigned in the inspector.");
+        }
     }
 }

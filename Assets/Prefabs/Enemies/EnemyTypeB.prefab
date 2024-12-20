@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 983331472252600054}
   - component: {fileID: 9158875157478935542}
   - component: {fileID: 2463398580773067586}
-  - component: {fileID: 6953298222120410030}
   m_Layer: 0
   m_Name: EnemyTypeB
   m_TagString: Enemy
@@ -104,6 +103,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 3.5
   damage: 2
+  xp: 3
+  entityHealth: {fileID: 0}
 --- !u!195 &6210987435623064960
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -186,19 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce685338b2714e89a2b93efa82d9db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 10
   maxHealth: 10
---- !u!114 &6953298222120410030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3470993415601923819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5df13adb3f848ff87d0e663c4f9569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  entityHealth: {fileID: 0}
+  UI: {fileID: 0}
