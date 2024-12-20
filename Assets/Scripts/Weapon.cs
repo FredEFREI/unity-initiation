@@ -24,6 +24,9 @@ public class Weapon : MonoBehaviour
     {
         this.transform.position += transform.forward  * (speed * owner.speedModifier) * Time.deltaTime;
 
+        attackSpeed *= owner.attackSpeedModifier;
+        damage *= owner.attackDamageModifier;
+        speed  *= owner.bulletSpeedModifier;
         if(Mathf.Abs(Vector3.Distance(startPosition, this.transform.position)) > range * owner.rangeModifer){
             Destroy(this.gameObject);
         }
