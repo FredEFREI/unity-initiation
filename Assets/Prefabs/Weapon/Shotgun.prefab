@@ -150,10 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 5
-  attackSpeed: 3
+  damage: 10
+  attackSpeed: 1.8
   range: 2
   entityHealth: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!1 &3678971677089050888
 GameObject:
   m_ObjectHideFlags: 0
