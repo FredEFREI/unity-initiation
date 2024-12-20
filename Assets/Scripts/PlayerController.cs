@@ -13,13 +13,16 @@ public class CharacterControllerScript : MonoBehaviour
 
     public List<GameObject> weapons = new List<GameObject>();
 
+    private List<Coroutine> weaponsRoutine = new List<Coroutine>();
+    private LevelUP lvlManager;
 
     public bool isRunning = false;
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
    
-    public float xp;
-    public float levelUpXp;
+    public float xp = 0;
+    public float levelUpXp = 5;
+    public int lvl = 1;
     
     public float attackSpeedModifier = 1.0f;
     public float attackDamageModifier = 1.0f;
@@ -46,15 +49,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
+        lvlManager = GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>();
 
-        foreach (var weapon in weapons)
-        {
-            if (!weapon.GetComponent<Weapon>().owner)
-                weapon.GetComponent<Weapon>().owner = this;
-
-            // Start a separate coroutine for each weapon
-            StartCoroutine(FireWeaponRoutine(weapon));
-        }
+        startAllCoroutine();
 
     }
 
@@ -83,8 +80,9 @@ public class CharacterControllerScript : MonoBehaviour
         {
             RotatePlayerToMouse();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
-            this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+            TogglePauseMenu();
+        this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
     void RotatePlayerToMouse()
@@ -141,7 +139,31 @@ public class CharacterControllerScript : MonoBehaviour
     }
     void OnDestroy()
     {
+        ToggleLooseMenu();
+    }
 
+    void startAllCoroutine()
+    {
+        foreach (var weapon in weapons)
+        {
+            if (!weapon.GetComponent<Weapon>().owner)
+                weapon.GetComponent<Weapon>().owner = this;
+
+            // Start a separate coroutine for each weapon
+             weaponsRoutine.Add(StartCoroutine(FireWeaponRoutine(weapon)));
+        }
+    }
+
+    void resetAllRoutine()
+    {
+        foreach (var coroutine in weaponsRoutine)
+        {
+            StopCoroutine(coroutine);
+        }
+
+        weaponsRoutine.Clear();
+        
+        startAllCoroutine();
     }
 
     IEnumerator FireWeaponRoutine(GameObject weapon)
@@ -164,12 +186,15 @@ public class CharacterControllerScript : MonoBehaviour
         if(xp >= levelUpXp){
             xp -= levelUpXp;
             levelUpXp *= 1.10f;
+            lvl++;
             StartCoroutine(UpgradePause());
+            resetAllRoutine();
         }
     }
 
-    IEnumerator UpgradePause(){
-
+    IEnumerator UpgradePause()
+    {
+        lvlManager.initializeLvlUp(lvl);
         Time.timeScale = 0;
         while(Time.timeScale == 0){
                 if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
@@ -180,7 +205,7 @@ public class CharacterControllerScript : MonoBehaviour
     }
     public void TogglePauseMenu()
     {
-        if (pauseCanvas != null)
+        if (pauseCanvas)
         {
             if (!pauseCanvas.activeSelf)
             {
