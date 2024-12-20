@@ -10,24 +10,20 @@ public class CharacterControllerScript : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
-
     public List<GameObject> weapons = new List<GameObject>();
-
-
     public bool isRunning = false;
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
-   
     public float xp;
     public float levelUpXp;
-    
+    public int level;
     public float attackSpeedModifier = 1.0f;
-    public float attackDamageModifier = 1.0f;
+    public int attackDamageModifier = 1;
     public float damageReduction = 0.0f;
     public float speedModifier = 1.0f;
     public int additionalProjection = 0;
     public float rangeModifer = 1.0f;
-
+    public float bulletSpeedModifier = 1.0f;
     public bool isInPauseMenu = false;
     public GameObject canvas;
 
@@ -54,6 +50,10 @@ public class CharacterControllerScript : MonoBehaviour
             // Start a separate coroutine for each weapon
             StartCoroutine(FireWeaponRoutine(weapon));
         }
+
+        levelUpXp = 10;
+        level =1;
+
 
     }
 
