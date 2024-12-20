@@ -10,10 +10,11 @@ public class CharacterControllerScript : MonoBehaviour
     public Camera mainCamera;    // Reference to the main camera
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
+
     public List<GameObject> weapons = new List<GameObject>();
 
+
     public bool isRunning = false;
-    
     public float repulseForce = 10f;    
     public float repulseDuration = 0.5f;
    
@@ -44,6 +45,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
+
         foreach (var weapon in weapons)
         {
             if (!weapon.GetComponent<Weapon>().owner)
@@ -52,6 +54,7 @@ public class CharacterControllerScript : MonoBehaviour
             // Start a separate coroutine for each weapon
             StartCoroutine(FireWeaponRoutine(weapon));
         }
+
     }
 
 
