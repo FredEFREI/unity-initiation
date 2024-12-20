@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 292811833688075805}
   m_Layer: 0
   m_Name: MeleDrone
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,4 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   damage: 5
-  owner: {fileID: 4531398976237695653, guid: 1c1a579bf86a2fd4282dcfb055176e49, type: 3}
+  radius: 3
