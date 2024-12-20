@@ -243,16 +243,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 798776689930265402}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &503321000028155474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 88046077778729892}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2144520337165082931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 88046077778729892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &798776689930265402
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144520337165082931}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &149383998287491597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,16 +352,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5960194766231073615}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &420626200138844155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 149383998287491597}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2227214076063303834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 149383998287491597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &5960194766231073615
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227214076063303834}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &200527480656151887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,16 +461,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545721430870496717}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &363806506036293817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 200527480656151887}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2175935972380491736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 200527480656151887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1545721430870496717
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175935972380491736}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &354045437147893194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,16 +570,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2887307209239537097}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &228901603027875900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 354045437147893194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1734944555641419613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 354045437147893194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2887307209239537097
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734944555641419613}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &564065095271582424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,16 +679,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2049468410515443387}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &6505327699574574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 564065095271582424}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1957349112270647375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 564065095271582424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2049468410515443387
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957349112270647375}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1453794589310378177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,11 +788,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6178171411939430409}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &636972286216739414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 1453794589310378177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6178171411939430409
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636972286216739414}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &1434397312046126391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -615,11 +897,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7706504027374601958}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &667955207407744280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 1567003262729867151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7706504027374601958
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667955207407744280}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &1331930324872362617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -677,11 +1006,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5018907051529501871}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &248712494008083601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 2272499359360802310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &5018907051529501871
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248712494008083601}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &1751162036478471152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -739,16 +1115,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3040897339375515723}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &2782324641848114815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 2402713546906274697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4441173408370356510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 2402713546906274697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3040897339375515723
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441173408370356510}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &2463234424877708890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,16 +1224,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6940029724156782917}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &2732488774120063916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 2463234424877708890}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4527589021287976141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 2463234424877708890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6940029724156782917
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4527589021287976141}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &3111807247459181899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -863,16 +1333,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080468373759603358}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &3236881472983421117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 3111807247459181899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4023206121224740828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3111807247459181899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2080468373759603358
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023206121224740828}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &3220747840449856706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -925,16 +1442,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2064246183222338387}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &3131848509019189556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 3220747840449856706}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3479159948356861525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3220747840449856706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2064246183222338387
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479159948356861525}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &3702718755757053248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -987,11 +1551,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4885537516835477395}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &3429670910949208023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3702718755757053248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &4885537516835477395
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429670910949208023}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &3793818347471200438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1049,11 +1660,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6005155466724404814}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &2952270333501067086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3747701512601351641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6005155466724404814
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952270333501067086}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &3730783776259571759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1111,11 +1769,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3219810142059408527}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &3137965872091398395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3996482631083752044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3219810142059408527
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137965872091398395}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &3509062222111428506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1173,11 +1878,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8460506215320707919}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &3132404466304143225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3999928565765944814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8460506215320707919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3132404466304143225}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &3478594678911696920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1235,16 +1987,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5559497405515286557}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &4940150253238520532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 4848717376426131234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6895022373547394485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 4848717376426131234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &5559497405515286557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895022373547394485}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5281855008862582309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1297,16 +2096,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9075645925688505229}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &5658774709725889491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 5281855008862582309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6176400706641218738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 5281855008862582309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &9075645925688505229
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176400706641218738}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5446505436468706359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1359,16 +2205,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 798548543638262432}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &5499235370795092417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 5446505436468706359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6300482298781238944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 5446505436468706359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &798548543638262432
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300482298781238944}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5735528686449738645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1421,16 +2314,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5259720161208666900}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &5214141748125922915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 5735528686449738645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6008541192838134018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 5735528686449738645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &5259720161208666900
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6008541192838134018}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5866436629156572584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1483,11 +2423,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7311277437602037124}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &5590046423283062591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 5866436629156572584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7311277437602037124
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590046423283062591}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6245700694436059230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1545,11 +2532,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1343004159979450294}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &5256103397224372860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6056073364853039339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1343004159979450294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256103397224372860}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6039208469527467293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1607,11 +2641,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7065975458806428713}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &5268515340852302603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6190081532355406236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7065975458806428713
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268515340852302603}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &5918711653482749034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1669,11 +2750,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 27197513149395405}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &4924827650283135176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6386825779554589279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &27197513149395405
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924827650283135176}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6874316630388289449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1731,11 +2859,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2801992418088947650}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &4904286512160549620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6410194622137290851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2801992418088947650
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904286512160549620}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6859400816825918869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1793,11 +2968,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1797843492613999714}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &5053372281665788325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6546896587614053170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1797843492613999714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053372281665788325}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6710316694037976772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1855,11 +3077,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8256318001205106304}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &4663373662977731641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 6651167049097565870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8256318001205106304
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663373662977731641}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &6595903775449047896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -1917,16 +3186,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1139522532779989989}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
 --- !u!4 &7624993787661166359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
   m_PrefabInstance: {fileID: 7932389031376622305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8281998053224081526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 7932389031376622305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1139522532779989989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281998053224081526}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &8283157306605744602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1979,11 +3295,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889942478873430439}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &7929078890719857485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 8283157306605744602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &889942478873430439
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929078890719857485}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &8446295594424108076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -2041,11 +3404,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4359667244784594646}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &7766546148516592013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 8588997808656155418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &4359667244784594646
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766546148516592013}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &8139881086772393708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -2103,11 +3513,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4063213833388836422}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &7372858042376670018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 8839360733347262933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &4063213833388836422
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372858042376670018}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &9038545754041418787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
@@ -2165,11 +3622,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tyled_Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335724287613658380, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2803133432174000518}
   m_SourcePrefab: {fileID: 100100000, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+--- !u!1 &7020308007909972913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2087999599100656279, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
+  m_PrefabInstance: {fileID: 9049759574868926758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2803133432174000518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020308007909972913}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &8814633924277998800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 559830332169401846, guid: 5f839a01881ee4c488dec5efa856ba2e, type: 3}
