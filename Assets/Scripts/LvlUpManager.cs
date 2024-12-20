@@ -28,13 +28,14 @@ public class LevelUP : MonoBehaviour
         _weapons = gameObject.GetComponent<WeaponManager>().basesWeapons;
         
         _upgrades.Add("Damage Up");
-        _upgrades.Add("Defense Up");
         _upgrades.Add("Health Up");
         _upgrades.Add("Speed Up");
+        _upgrades.Add("Range Up");
         _upgrades.Add("Additional Projectiles");
         _upgrades.Add("Slicing Drone");
         _upgrades.Add("Aura of Hurting");
         _upgrades.Add("Slow Obliterator");
+        _upgrades.Add("Robondiball");
     }
 
     public void initializeLvlUp(int lvl)
@@ -98,34 +99,35 @@ public class LevelUP : MonoBehaviour
             switch (choice)
             {
                 case 0 :
-                    print(_upgrades[0]);
+                    player.GetComponent<CharacterControllerScript>().attackDamageModifier += 0.5f;
                     break;
                 case 1 :
-                    print(_upgrades[1]);
+                    player.GetComponent<Health>().maxHealth = Mathf.FloorToInt(player.GetComponent<Health>().maxHealth * 0.5f);
                     break;
                 case 2 :
-                    print(_upgrades[2]);
+                    player.GetComponent<CharacterControllerScript>().speedModifier += 0.2f;
                     break;
                 case 3 :
-                    print(_upgrades[3]);
+                    player.GetComponent<CharacterControllerScript>().rangeModifer += 0.3f;
                     break;
                 case 4 :
-                    print(_upgrades[4]);
+                    player.GetComponent<CharacterControllerScript>().additionalProjection += 1;
                     break;
                 case 5 :
-                    print(_upgrades[5]);
+                    Instantiate(_weapons[2]);
+                    _takenUpgrades.Add(5);
                     break;
                 case 6 :
-                    print(_upgrades[6]);
+                    Instantiate(_weapons[1]);
+                    _takenUpgrades.Add(6);
                     break;
                 case 7 :
-                    print(_upgrades[7]);
+                    player.GetComponent<CharacterControllerScript>().weapons.Add(_weapons[1]);
+                    _takenUpgrades.Add(7);
                     break;
                 case 8 :
-                    print(_upgrades[8]);
-                    break;
-                case 9 :
-                    print(_upgrades[9]);
+                    player.GetComponent<CharacterControllerScript>().weapons.Add(_weapons[3]);
+                    _takenUpgrades.Add(8);
                     break;
                 default:
                     print("Oups, did not implement all LevelUp");
@@ -143,7 +145,6 @@ public class LevelUP : MonoBehaviour
             {
                 lvlMenu.SetActive(true);
                 Time.timeScale = 0;
-                print(this.list[0].Item2);
                 texts[0].GetComponent<TextMeshProUGUI>().text= this.list[0].Item2;
                 texts[1].GetComponent<TextMeshProUGUI>().text = this.list[1].Item2;
                 texts[2].GetComponent<TextMeshProUGUI>().text = this.list[2].Item2;

@@ -11,11 +11,7 @@ public class CharacterControllerScript : MonoBehaviour
     private CharacterController characterController;
     private Rigidbody rb;        // Reference to the Rigidbody component
     public List<GameObject> weapons = new List<GameObject>();
-
-    public bool isRunning = false;
-    public float repulseForce = 10f;    
-    public float repulseDuration = 0.5f;
-
+    
 
     private List<Coroutine> weaponsRoutine = new List<Coroutine>();
     private LevelUP lvlManager;
@@ -30,7 +26,7 @@ public class CharacterControllerScript : MonoBehaviour
     
 
     public float attackSpeedModifier = 1.0f;
-    public int attackDamageModifier = 1;
+    public float attackDamageModifier = 1;
     public float damageReduction = 0.0f;
     public float speedModifier = 1.0f;
     public int additionalProjection = 0;
@@ -56,12 +52,10 @@ public class CharacterControllerScript : MonoBehaviour
         
         lvlManager = GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>();
 
-        startAllCoroutine();
+        StartAllCoroutine();
 
         levelUpXp = 10;
-        level =1;
-
-
+        lvl =1;
     }
 
 
@@ -151,7 +145,7 @@ public class CharacterControllerScript : MonoBehaviour
         ToggleLooseMenu();
     }
 
-    void startAllCoroutine()
+    void StartAllCoroutine()
     {
         foreach (var weapon in weapons)
         {
@@ -163,7 +157,7 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    void resetAllRoutine()
+    void ResetAllRoutine()
     {
         foreach (var coroutine in weaponsRoutine)
         {
@@ -172,7 +166,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         weaponsRoutine.Clear();
         
-        startAllCoroutine();
+        StartAllCoroutine();
     }
 
     IEnumerator FireWeaponRoutine(GameObject weapon)
@@ -197,7 +191,6 @@ public class CharacterControllerScript : MonoBehaviour
             levelUpXp *= 1.10f;
             lvl++;
             StartCoroutine(UpgradePause());
-            resetAllRoutine();
         }
     }
 
@@ -211,6 +204,8 @@ public class CharacterControllerScript : MonoBehaviour
                 }
                 yield return new WaitForEndOfFrame();
         }
+        ResetAllRoutine();
+
     }
     public void TogglePauseMenu()
     {
