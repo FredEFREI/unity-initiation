@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2998762430786836489
+--- !u!1 &8957911347017814848
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2781294183157690618}
-  - component: {fileID: 2221660833138522434}
-  - component: {fileID: 8032487096999024546}
+  - component: {fileID: 2106736770442479166}
+  - component: {fileID: 4500958450228159296}
+  - component: {fileID: 9110643144406557678}
   m_Layer: 0
   m_Name: LvlUpManager
   m_TagString: LvlManager
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2781294183157690618
+--- !u!4 &2106736770442479166
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998762430786836489}
+  m_GameObject: {fileID: 8957911347017814848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,13 +33,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2221660833138522434
+--- !u!114 &4500958450228159296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998762430786836489}
+  m_GameObject: {fileID: 8957911347017814848}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc1d1865321f644087dc21337ac5b38, type: 3}
@@ -54,16 +54,18 @@ MonoBehaviour:
   - {fileID: 611693379099266615, guid: bc948920ff8f9db4dadcb5de1569ca78, type: 3}
   - {fileID: 1468708298811175274, guid: 0cef5860c0e034615aa82ccb707154f7, type: 3}
   - {fileID: 2371202016283185381, guid: 0664eb31a19e89948ba15f169450bf04, type: 3}
---- !u!114 &8032487096999024546
+--- !u!114 &9110643144406557678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998762430786836489}
+  m_GameObject: {fileID: 8957911347017814848}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce361283ae520354583f3a8f9bacf9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nbrUpgrade: 10
+  player: {fileID: 0}
+  lvlMenu: {fileID: 0}

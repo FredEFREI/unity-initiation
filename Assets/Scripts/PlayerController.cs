@@ -14,6 +14,7 @@ public class CharacterControllerScript : MonoBehaviour
     public List<GameObject> weapons = new List<GameObject>();
 
     private List<Coroutine> weaponsRoutine = new List<Coroutine>();
+    private LevelUP lvlManager;
 
     public bool isRunning = false;
     public float repulseForce = 10f;    
@@ -21,7 +22,7 @@ public class CharacterControllerScript : MonoBehaviour
    
     public float xp = 0;
     public float levelUpXp = 5;
-    private int lvl = 1;
+    public int lvl = 1;
     
     public float attackSpeedModifier = 1.0f;
     public float attackDamageModifier = 1.0f;
@@ -48,6 +49,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         
+        lvlManager = GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>();
 
         startAllCoroutine();
 
@@ -78,8 +80,9 @@ public class CharacterControllerScript : MonoBehaviour
         {
             RotatePlayerToMouse();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
-            this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+            TogglePauseMenu();
+        this.transform.position = new Vector3(this.transform.position.x, 1.1f, this.transform.position.z);
     }
 
     void RotatePlayerToMouse()
@@ -136,7 +139,7 @@ public class CharacterControllerScript : MonoBehaviour
     }
     void OnDestroy()
     {
-
+        ToggleLooseMenu();
     }
 
     void startAllCoroutine()
@@ -191,7 +194,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     IEnumerator UpgradePause()
     {
-        GameObject.FindGameObjectWithTag("LvlManager").GetComponent<LevelUP>().initializeLvlUp(lvl);
+        lvlManager.initializeLvlUp(lvl);
         Time.timeScale = 0;
         while(Time.timeScale == 0){
                 if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)){
@@ -202,7 +205,7 @@ public class CharacterControllerScript : MonoBehaviour
     }
     public void TogglePauseMenu()
     {
-        if (pauseCanvas != null)
+        if (pauseCanvas)
         {
             if (!pauseCanvas.activeSelf)
             {

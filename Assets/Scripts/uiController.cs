@@ -19,10 +19,13 @@ public class uiController : MonoBehaviour
     public int playerMaxHealth = 10;
     public int playerHealth = 10;
 
+    private GameObject player;
+
     void Start()
     {   
         // initialise the level display when the game starts
         UpdateLevelUI();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     
 
@@ -33,7 +36,7 @@ public class uiController : MonoBehaviour
     }
     void UpdateLevelUI()
     {
-        levelUI.text = "LV: " + playerLevel.ToString();
+        levelUI.text = "LV: " + player.GetComponent<CharacterControllerScript>().lvl;
     }
     public void UpdateHealthUI()
     {
