@@ -40,7 +40,7 @@ public class RandomShotBouncing : RandomShot
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!(collision.gameObject.tag == "Player"))
+        if ((collision.gameObject.tag == "Enemy") || (collision.gameObject.tag == "Player") || (collision.gameObject.tag == "Wall"))
         {
             direction = new Vector3(direction.x*(-1), 0, direction.z*(-1));
         }
