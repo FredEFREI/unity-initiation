@@ -18,6 +18,7 @@ public class LevelUP : MonoBehaviour
     public List<Tuple<int, string>> list;
 
     private List<GameObject> _weapons;
+    private List<GameObject> _addons;
     private List<string> _upgrades = new List<string>();
 
     public bool isWeapon;
@@ -26,6 +27,7 @@ public class LevelUP : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         _weapons = gameObject.GetComponent<WeaponManager>().basesWeapons;
+        _addons = gameObject.GetComponent<WeaponManager>().upgradesWeapons;
         
         _upgrades.Add("Damage Up");
         _upgrades.Add("Health Up");
@@ -114,19 +116,19 @@ public class LevelUP : MonoBehaviour
                     player.GetComponent<CharacterControllerScript>().additionalProjection += 1;
                     break;
                 case 5 :
-                    Instantiate(_weapons[2]);
+                    Instantiate(_addons[2]);
                     _takenUpgrades.Add(5);
                     break;
                 case 6 :
-                    Instantiate(_weapons[1]);
+                    Instantiate(_addons[1]);
                     _takenUpgrades.Add(6);
                     break;
                 case 7 :
-                    player.GetComponent<CharacterControllerScript>().weapons.Add(_weapons[1]);
+                    player.GetComponent<CharacterControllerScript>().weapons.Add(_addons[0]);
                     _takenUpgrades.Add(7);
                     break;
                 case 8 :
-                    player.GetComponent<CharacterControllerScript>().weapons.Add(_weapons[3]);
+                    player.GetComponent<CharacterControllerScript>().weapons.Add(_addons[3]);
                     _takenUpgrades.Add(8);
                     break;
                 default:
