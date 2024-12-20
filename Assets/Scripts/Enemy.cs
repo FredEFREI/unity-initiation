@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
         
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         transform.parent = GameObject.Find("Entities").transform;
-        
         float angle = Random.Range(0.0f, 1.0f) * Mathf.PI * 2;
         float x = Mathf.Cos(angle) * 15;
         float z = Mathf.Sin(angle) * 15;
@@ -46,6 +45,7 @@ public class Enemy : MonoBehaviour
             // Move towards target (Object A)
             Vector3 directionToTarget = (target.position - transform.position).normalized;
             rb.velocity = directionToTarget * speed;
+            transform.LookAt(target);
         }
     }
     
