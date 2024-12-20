@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,17 +25,17 @@ public class uiController : MonoBehaviour
     void Start()
     {   
         // initialise the level display when the game starts
-        UpdateLevelUI();
         player = GameObject.FindGameObjectWithTag("Player");
+        UpdateLevelUI();
     }
-    
+
 
     // Methods to update the TextMeshPro for the level, life and ammo display
     void UpdateAmmoUI()
     {
         ammoUI.text = playerAmmo + "/" + playerMagSize;
     }
-    void UpdateLevelUI()
+    public void UpdateLevelUI()
     {
         levelUI.text = "LV: " + player.GetComponent<CharacterControllerScript>().lvl;
     }

@@ -210,6 +210,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6886775791132528185, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
   m_PrefabInstance: {fileID: 761773606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &765989622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8573438563453931171, guid: 6ce89c614722f434b827581fd4de4000, type: 3}
+  m_PrefabInstance: {fileID: 761773606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1096358081
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +580,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: LvlManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9110643144406557678, guid: d3058386b749c294c98b310ec267abd2, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 765989622}
     - target: {fileID: 9110643144406557678, guid: d3058386b749c294c98b310ec267abd2, type: 3}
       propertyPath: lvlMenu
       value: 

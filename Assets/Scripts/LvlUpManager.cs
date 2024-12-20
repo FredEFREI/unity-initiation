@@ -11,6 +11,7 @@ public class LevelUP : MonoBehaviour
     private static List<int> _takenUpgrades = new List<int>(); 
     public GameObject player;
     public GameObject lvlMenu;
+    public GameObject ui;
     public List<GameObject> texts;
     public List<GameObject> choices;
 
@@ -38,11 +39,15 @@ public class LevelUP : MonoBehaviour
 
     public void initializeLvlUp(int lvl)
     {
+        
+        
         list = new List<Tuple<int, string>>();
+        ui.GetComponent<uiController>().UpdateLevelUI();
 
         // From the lvl 3 and after, all level up propose upgrade or additional non-base weapons
         if (lvl >= 3)
         {
+            
             isWeapon = false;
             int choice = Random.Range(0, _upgrades.Count);
             list.Add(new Tuple<int, string>(choice, _upgrades[choice]));
@@ -150,6 +155,9 @@ public class LevelUP : MonoBehaviour
                 
             } else
             {
+                choices[0].GetComponent<Button>().onClick.RemoveAllListeners();
+                choices[1].GetComponent<Button>().onClick.RemoveAllListeners();
+                choices[2].GetComponent<Button>().onClick.RemoveAllListeners();
                 lvlMenu.SetActive(false);
                 Time.timeScale = 1;
             }  
