@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8338083017123926012}
   m_Layer: 0
   m_Name: BigCannon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f995621827fec174ab70fd86ab069ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  damage: 8
+  attackSpeed: 10
+  range: 20
+  entityHealth: {fileID: 0}
+  owner: {fileID: 0}
   speed: 1
   damage: 8
   attackSpeed: 10
