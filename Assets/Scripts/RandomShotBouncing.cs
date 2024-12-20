@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class RandomShotBouncing : RandomShot
 {
     
-    public float speed = 6;  //Bullet travel speed;
+    public float speed = 3;  //Bullet travel speed;
     public int damage = 4; //Flat damage
     public float attackSpeed = 5f; //Seconds between each shot
     public float range = 25f;  //Range before destruction;
@@ -40,14 +40,13 @@ public class RandomShotBouncing : RandomShot
 
     private void OnCollisionEnter(Collision collision)
     {
-
+        if (!(collision.gameObject.tag == "Player"))
+        {
+            direction = new Vector3(direction.x*(-1), 0, direction.z*(-1));
+        }
+        
         if (entityHealth == null)
         {
-            
-            if (!collision.gameObject.tag == "Player")
-            {
-                direction = new Vector3(direction.x*(-1), 0, direction.z*(-1));
-            }
             entityHealth = collision.gameObject.GetComponent<Health>();
             if (entityHealth == null)
                 return;
@@ -55,16 +54,12 @@ public class RandomShotBouncing : RandomShot
 
         if (collision.gameObject.tag == "Enemy")
         {
-
             numberOfCollision--;
-            direction = new Vector3(direction.x*(-1), 0, direction.z*(-1));
             if (numberOfCollision == 0)
             {
                 Destroy(gameObject);
             }
-
             entityHealth.takeDamage(damage);
-
         }
     }
 }

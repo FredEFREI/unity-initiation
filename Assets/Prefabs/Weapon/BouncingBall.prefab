@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4257815296042644161}
   - component: {fileID: 1556094436745218651}
   - component: {fileID: 5102897347528347320}
-  - component: {fileID: 4298657225764723461}
+  - component: {fileID: 7858932666517767433}
   m_Layer: 0
   m_Name: BouncingBall
   m_TagString: Weapon
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4298657225764723461
+--- !u!114 &7858932666517767433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,15 +124,15 @@ MonoBehaviour:
   range: 5
   entityHealth: {fileID: 0}
   owner: {fileID: 0}
-  speed: 0
-  damage: 2
-  attackSpeed: 1
-  range: 5
+  speed: 1
+  damage: 8
+  attackSpeed: 10
+  range: 20
   entityHealth: {fileID: 0}
   numberOfCollision: 3
-  speed: 6
+  speed: 3
   damage: 4
   attackSpeed: 5
-  range: 25
+  range: 50
   entityHealth: {fileID: 0}
   numberOfCollision: 3
